@@ -8,6 +8,8 @@ import { ConfigModule, ConfigService } from '@nestjs/config';
 import { ConsumerService } from './config/consumer.service';
 import { NotificationsEntity } from './notifications/entities/notification.entity';
 import { NotificationsService } from './notifications/notifications.service';
+import { FcmNotificationService } from './config/firebase.provider';
+// import { FirebaseAdminProvider } from './config/firebase.provider';
 
 @Module({
   imports: [
@@ -27,10 +29,11 @@ import { NotificationsService } from './notifications/notifications.service';
       }),
       inject: [ConfigService]
     }),
-    TypeOrmModule.forFeature([NotificationsEntity])
+    TypeOrmModule.forFeature([NotificationsEntity]),
+
    ],
   controllers: [AppController],
-  providers: [AppService, RabbitMQService, ConsumerService, NotificationsService], 
+  providers: [AppService, RabbitMQService, ConsumerService, NotificationsService, FcmNotificationService], 
 })
 export class AppModule {
  
