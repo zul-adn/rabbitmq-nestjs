@@ -26,11 +26,8 @@ export class NotificationsService {
 
     async saveNotification(notification: NotificationDto){
         try {
-            await this.notificationRepository.save(notification);
-           const pushNotif = await this.pushNotification(notification);
-        //    if(pushNotif){
-
-        //    }
+          await this.notificationRepository.save(notification);
+          await this.pushNotification(notification);
          } catch (error) {
            Logger.error(error);
          }

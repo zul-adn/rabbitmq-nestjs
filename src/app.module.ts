@@ -9,7 +9,6 @@ import { ConsumerService } from './config/consumer.service';
 import { NotificationsEntity } from './notifications/entities/notification.entity';
 import { NotificationsService } from './notifications/notifications.service';
 import { FcmNotificationService } from './config/firebase.provider';
-// import { FirebaseAdminProvider } from './config/firebase.provider';
 
 @Module({
   imports: [
