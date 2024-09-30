@@ -678,6 +678,21 @@
   resolved "https://registry.yarnpkg.com/@lukeed/csprng/-/csprng-1.1.0.tgz#1e3e4bd05c1cc7a0b2ddbd8a03f39f6e4b5e6cfe"
   integrity sha512-Z7C/xXCiGWsg0KuKsHTKJxbWhpI3Vs5GwLfOean7MGyVFGqdRgBbAjOCh6u4bbjPc/8MJ2pZmK/0DLdCbivLDA==
 
+"@nestjs/bull-shared@^10.2.1":
+  version "10.2.1"
+  resolved "https://registry.yarnpkg.com/@nestjs/bull-shared/-/bull-shared-10.2.1.tgz#64123b663ff1cda7e5635291fc552c9a2ec232bb"
+  integrity sha512-zvnTvSq6OJ92omcsFUwaUmPbM3PRgWkIusHPB5TE3IFS7nNdM3OwF+kfe56sgKjMtQQMe/56lok0S04OtPMX5Q==
+  dependencies:
+    tslib "2.6.3"
+
+"@nestjs/bull@^10.2.1":
+  version "10.2.1"
+  resolved "https://registry.yarnpkg.com/@nestjs/bull/-/bull-10.2.1.tgz#808568a4db1d848def3ff435a59ad8ec326bc6f2"
+  integrity sha512-y7AII50p+FoyAZP3OKXgi0QCFUFGJ4X7G3L2Arw3BtLsEYvLxTaRB1DPv5a80LYp8Pj4xisIzF4gNv3hfkuErw==
+  dependencies:
+    "@nestjs/bull-shared" "^10.2.1"
+    tslib "2.6.3"
+
 "@nestjs/cli@^10.0.0":
   version "10.4.5"
   resolved "https://registry.yarnpkg.com/@nestjs/cli/-/cli-10.4.5.tgz#d6563b87e8ca1d0f256c19a7847dbcc96c76a88e"
@@ -4656,6 +4671,11 @@ tsconfig-paths@4.2.0, tsconfig-paths@^4.1.2, tsconfig-paths@^4.2.0:
     json5 "^2.2.2"
     minimist "^1.2.6"
     strip-bom "^3.0.0"
+
+tslib@2.6.3:
+  version "2.6.3"
+  resolved "https://registry.yarnpkg.com/tslib/-/tslib-2.6.3.tgz#0438f810ad7a9edcde7a241c3d80db693c8cbfe0"
+  integrity sha512-xNvxJEOUiWPGhUuUdQgAJPKOOJfGnIyKySOc09XkKsgdUV/3E2zvwZYdejjmRgPCgcym1juLH3226yA7sEFJKQ==
 
 tslib@2.7.0, tslib@^2.1.0, tslib@^2.6.2:
   version "2.7.0"

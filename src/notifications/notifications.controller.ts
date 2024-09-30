@@ -1,10 +1,10 @@
 import { Body, Controller, Post } from '@nestjs/common';
-import { NotificationsService } from './notifications.service';
 import { NotificationDto } from './dto/notification.dto';
+import { RabbitMQService } from 'src/config/rabbitmq.config';
 
 @Controller('notifications')
 export class NotificationsController {
-  constructor(private readonly notificationsService: NotificationsService) {}
+  constructor(private readonly notificationsService: RabbitMQService) {}
 
   @Post('send-notification')
   sendNotification(@Body() notifications : NotificationDto){

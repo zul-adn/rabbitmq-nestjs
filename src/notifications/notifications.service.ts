@@ -1,16 +1,15 @@
 import { Inject, Injectable } from '@nestjs/common';
 import { NotificationDto } from './dto/notification.dto';
-import { ClientProxy } from '@nestjs/microservices';
+import { RabbitMQService } from 'src/config/rabbitmq.config';
 
 @Injectable()
 export class NotificationsService {
 
-    constructor(@Inject("NOTIFICATION_SERVICE") private rabbitClient: ClientProxy){} 
+    constructor(private readonly rabbitMQService: RabbitMQService){} 
 
     sendNotification(notifications: NotificationDto){
         try {
-            this.rabbitClient.emit('notification.queue', notifications);
-            return "Success Send Message";
+            this.rabbitMQService.sendNotification(notifications);
         } catch (error) {
             console.log(error);
         }
