@@ -31,4 +31,9 @@ Check out a few resources that may come in handy when working with NestJS:
 - Make sure you have MySQL database running in your machine
 - Create .env file, copy format from env.example, and fill all value in .env
 
+## Test
+
+- Go to ```/api``` to see API documentation for the notification
+
+
 
