@@ -1,6 +1,6 @@
-import { Column, CreateDateColumn, Entity, PrimaryGeneratedColumn, UpdateDateColumn } from "typeorm";
+import { Column, CreateDateColumn, Entity, PrimaryGeneratedColumn } from "typeorm";
 
-@Entity('notification')
+@Entity('fcm_job')
 export class NotificationsEntity {
 
     @PrimaryGeneratedColumn()
@@ -17,5 +17,8 @@ export class NotificationsEntity {
 
     @Column()
     text: string
+
+    @CreateDateColumn()
+    deliveredAt: Date
 
 }

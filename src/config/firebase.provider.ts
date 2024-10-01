@@ -16,11 +16,11 @@ export class FcmNotificationService {
   constructor() {}
 
   async sendingNotificationOneUser(notification: NotificationDto) {
-    Logger.log("FROM PUSH");
+    Logger.log(notification.text);
     const payload= {
         token: notification.device,
         notification: {
-          title: notification.identifier,
+          title: "Incoming message",
           body: notification.text
         },
     }

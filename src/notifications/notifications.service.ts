@@ -35,7 +35,12 @@ export class NotificationsService {
 
     async pushNotification(notification:NotificationDto){
       try{
-        this.pushNotificationService.sendingNotificationOneUser(notification)
+       const pushToFirebase = await this.pushNotificationService.sendingNotificationOneUser(notification);
+
+       if(pushToFirebase){
+        
+       }
+
       }catch(error){
         Logger.error(error)
       }
