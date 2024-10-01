@@ -9,6 +9,7 @@ import { ConsumerService } from './config/consumer.service';
 import { NotificationsEntity } from './notifications/entities/notification.entity';
 import { NotificationsService } from './notifications/notifications.service';
 import { FcmNotificationService } from './config/firebase.provider';
+import { MessageDoneService } from './config/message-done.service';
 
 @Module({
   imports: [
@@ -32,7 +33,7 @@ import { FcmNotificationService } from './config/firebase.provider';
 
    ],
   controllers: [AppController],
-  providers: [AppService, RabbitMQService, ConsumerService, NotificationsService, FcmNotificationService], 
+  providers: [AppService, RabbitMQService, ConsumerService, NotificationsService, FcmNotificationService, MessageDoneService], 
 })
 export class AppModule {
  

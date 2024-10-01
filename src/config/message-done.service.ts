@@ -7,9 +7,9 @@ import {
 import { NotificationDto } from 'src/notifications/dto/notification.dto';
 
 @Injectable()
-export class RabbitMQService {
+export class MessageDoneService {
   private client: ClientProxy;
-  private queue = "notification.fcm";
+  private queue = "notification.done";
   constructor() {
     this.client = ClientProxyFactory.create({
       transport: Transport.RMQ,
